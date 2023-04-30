@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+</head>
+<body>
+<h1 style="color: darkslateblue">SPORTY SHOES</h1>
+<form action="#" th:action="@{/signIn}" th:object="${users}" method="post">
+    <label><b>Email</b></label>
+    <input style="margin-left: 25px" type="email" th:field="*{email}"/><br/>
+    <label><b>Password</b></label>
+    <input style="margin-top: 10px" type="password" th:field="*{password}"/><br/>
+    <label><b>User Type</b></label>
+    <input style="margin-top: 10px" type="radio"  value="admin" th:field="*{userType}"/>Admin
+    <input type="radio" value="customer" th:field="*{userType}"/>Customer
+    <br/>
+    <input style="margin-top: 10px" type="submit" value="Sign In"/>
+</form>
+<br/>
+<a style="margin-left: 180px" th:href="@{/openSignUp}">Sign Up</a>
+</body>
+</html>

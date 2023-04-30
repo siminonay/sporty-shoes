@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Home</title>
+</head>
+<body>
+<h2 style="color: darkslateblue">Customer Home Page</h2>
+<h4>WELCOME!</h4><td th:text="${session.email}"></td>
+</br>
+</br>
+<a th:href="@{/viewProductsPage}">View Products</a> |
+<a th:href="@{/viewCategoryPage}">View Category</a>
+</body>
+</html>
